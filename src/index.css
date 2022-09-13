@@ -41,3 +41,9 @@ body {
   font-weight: bold;
   border-radius: 4px;
 }
+
+.page {
+  background-color: white;
+  width: 200px;
+  height: 300px;
+}

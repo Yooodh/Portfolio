@@ -4,25 +4,21 @@ import '../index.css';
 export default function Header() {
   return (
     <div className='header'>
-      <h1>
-        <Link to='/'>메인 타이틀</Link>
-      </h1>
-
       <div className='menu'>
-        <Link to='' className='link'>
-          메뉴1
+        <Link to='/' className='link'>
+          Header
         </Link>
 
-        <Link to='' className='link'>
+        <Link to='Menu2.js' className='link'>
           메뉴2
         </Link>
 
-        <Link to='' className='link'>
+        <Link to='Menu3.js' className='link'>
           메뉴3
         </Link>
 
-        <Link to='' className='link'>
-          메뉴4
+        <Link to='Footer.js' className='link'>
+          Footer
         </Link>
       </div>
     </div>
