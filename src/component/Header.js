@@ -9,15 +9,15 @@ export default function Header() {
           Header
         </Link>
 
-        <Link to='Menu2.js' className='link'>
+        <Link to='Menu2' className='link'>
           메뉴2
         </Link>
 
-        <Link to='Menu3.js' className='link'>
+        <Link to='Menu3' className='link'>
           메뉴3
         </Link>
 
-        <Link to='Footer.js' className='link'>
+        <Link to='Footer' className='link'>
           Footer
         </Link>
       </div>
