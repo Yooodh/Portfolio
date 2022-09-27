@@ -4,10 +4,15 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   background-color: rgb(154, 185, 175);
 }
 
+/* Main */
 .wrap {
   position: absolute;
   top: 50%;
@@ -23,6 +28,7 @@ body {
   border-radius: 50%;
 }
 
+/* Header */
 .header {
   position: relative;
 }
@@ -42,8 +48,58 @@ body {
   border-radius: 4px;
 }
 
-.page {
-  background-color: white;
-  width: 200px;
-  height: 300px;
+/* Menu2 */
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /* perspective의 값이 작을수록 원근감을 더 가까이서 볼 수 있다. */
+  perspective: 1000px;
+  display: flex;
 }
+
+.flip-btn {
+  width: 100px;
+  height: 100px;
+  color: black;
+
+  /* 수평 중앙에 위치 */
+  text-align: center;
+
+  /* 요소의 height 값과 line-height 값이 같으면 수직 중앙 정렬된다. */
+  /* 단, 텍스트가 한 줄 일때만 가능하다. */
+  line-height: 100px;
+
+  /* 3D 공간에 배치하기 */
+  transform-style: preserve-3d;
+
+  /* transform 회전에 해당하는 애니메이션이 0.5초에 거쳐서 보이게 하기 */
+  transition: 0.5s;
+
+  cursor: pointer;
+  margin: 50px;
+}
+
+.flip-btn:hover {
+  /* 음수로 지정해서 아래로 회전하기 */
+  transform: rotateX(-90deg);
+}
+
+.front {
+  background-color: rgb(255, 255, 255);
+  height: 100px;
+  transform: translateZ(50px);
+}
+
+.back {
+  background-color: rgb(224, 224, 223);
+  height: 100px;
+
+  /* rotateX 가로줄을 기준으로 회전 */
+  /* translateZ 3D 일 때 위아래로 이동 */
+  transform: rotateX(90deg) translateZ(150px);
+}
+
+/* Menu3 */
