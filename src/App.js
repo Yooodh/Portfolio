@@ -1,20 +1,10 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Main from './component/Main';
-import Header from './component/Header';
-import Menu2 from './component/Menu2';
+import Home from './component/Home/Home';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className='App'>
-        <Header />
-        <Routes>
-          <Route exact path='/' element={<Main />} />
-
-          <Route path='Menu2' element={<Menu2 />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <>
+      <Home />
+    </>
   );
 }
 

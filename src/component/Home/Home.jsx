@@ -1,14 +1,16 @@
 import React from 'react';
-import '../index.css';
+
+import './Home.css';
+
 import Typical from 'react-typical';
 import Flip from 'react-reveal/Flip';
 
-function Main() {
+function Home() {
   return (
     <div className='wrap'>
       <header className='App-header'>
         <Flip top>
-          <h1>Hi, I'm Yoo!</h1>
+          <h2>Hi, I'm Yoo!</h2>
         </Flip>
 
         <img src='../imgs/yoo.JPG' className='yoo-img'></img>
@@ -31,4 +33,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Home;
