@@ -112,3 +112,18 @@ h2 {
   padding: 1rem 0;
   color: var(--blackColor);
 }
+
+::selection {
+  background: var(--PrimaryColor);
+  color: var(--whiteColor);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--greyBg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--PrimaryColor);
+  border-radius: 10px;
+}
