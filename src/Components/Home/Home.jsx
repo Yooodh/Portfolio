@@ -4,6 +4,9 @@ import './Home.css';
 // Import Typical
 import Typical from 'react-typical';
 
+// Imported Images
+import Yoo from '../../imgs/yoo.jpg';
+
 // Import AOS
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -28,7 +31,7 @@ const Home = () => {
         className='homeImages flex'
       >
         <div>
-          <img src='../imgs/yoo.JPG' className='yoo-img'></img>
+          <img src={Yoo} className='yoo-img'></img>
           <p>
             <Typical
               loop={Infinity}
