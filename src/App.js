@@ -3,6 +3,7 @@ import Home from './Components/Home/Home';
 import Support from './Components/Support/Support';
 import Info from './Components/Info/Info';
 import Social from './Components/Social/Social';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Support />
       <Info />
       <Social />
+      <Footer />
     </>
   );
 }
