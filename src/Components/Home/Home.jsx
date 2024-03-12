@@ -25,11 +25,7 @@ const Home = () => {
         </h1>
       </div>
 
-      <div
-        data-aos='fade-down'
-        data-aos-duration='2500'
-        className='homeImages flex'
-      >
+      <div data-aos='fade-down' data-aos-duration='2500'>
         <div>
           <img src={Yoo} className='yoo-img'></img>
           <p>
