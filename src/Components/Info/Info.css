@@ -48,6 +48,9 @@
         .colorTwo {
           background: var(--colorTwo);
         }
+        .colorThree {
+          background: var(--colorThree);
+        }
       }
     }
   }

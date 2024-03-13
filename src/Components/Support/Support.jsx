@@ -18,9 +18,9 @@ const Support = () => {
     <div className='support container section'>
       <div className='sectionContainer'>
         <div className='titlesDiv'>
-          <small>Title 1</small>
-          <h2>Title 2</h2>
-          <p>Contents</p>
+          <small>About Me</small>
+          <h2>유대현</h2>
+          <p>1996. 01. 12</p>
         </div>
 
         <div className='infoDiv grid'>
@@ -31,7 +31,7 @@ const Support = () => {
               className='singleInfo'
             >
               <span className='number'>01</span>
-              <h4>Title</h4>
+              <h4>Introduce</h4>
               <p>Contents</p>
             </div>
             <div
@@ -40,7 +40,7 @@ const Support = () => {
               className='singleInfo'
             >
               <span className='number colorOne'>02</span>
-              <h4>Title</h4>
+              <h4>Activities</h4>
               <p>Contents</p>
             </div>
             <div
@@ -49,13 +49,13 @@ const Support = () => {
               className='singleInfo'
             >
               <span className='number colorTwo'>03</span>
-              <h4>Title</h4>
+              <h4>Awards</h4>
               <p>Contents</p>
             </div>
           </div>
 
           <div data-aos='fade-up' data-aos-duration='2500' className='imgDiv'>
-            <img src={Img} />
+            <img src={Img} alt='profile-img' />
           </div>
         </div>
       </div>

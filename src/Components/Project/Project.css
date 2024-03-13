@@ -1,12 +1,12 @@
-.socials {
+.projects {
   .sectionContainer {
     text-align: center;
 
-    .socialsContainer {
+    .projectsContainer {
       margin-top: 1rem;
       gap: 1.5rem;
 
-      .singlesocial {
+      .singleproject {
         position: relative;
         height: 320px;
         width: 85%;
@@ -17,8 +17,8 @@
         margin: auto;
 
         .backgroundImage,
-        .socialImage,
-        .socialName {
+        .projectImage,
+        .projectName {
           position: absolute;
         }
 
@@ -32,7 +32,7 @@
           object-fit: cover;
         }
 
-        .socialImage {
+        .projectImage {
           height: 50px;
           width: 50px;
           object-fit: cover;
@@ -57,7 +57,7 @@
           }
         }
 
-        .socialName {
+        .projectName {
           bottom: -100%;
           width: 100%;
           height: max-content;
@@ -91,12 +91,12 @@
         }
 
         &:hover {
-          .socialName {
+          .projectName {
             bottom: 0;
             transition: 1s ease-in-out;
           }
 
-          .socialImage {
+          .projectImage {
             bottom: 110px;
             transition: 1s ease-in-out;
           }

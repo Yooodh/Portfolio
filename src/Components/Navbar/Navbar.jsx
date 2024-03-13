@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import './Navbar.css';
 
 // Imported Icons
-import { SiConsul } from 'react-icons/si';
+import { AiFillSmile } from 'react-icons/ai';
 import { BsPhoneVibrate } from 'react-icons/bs';
 import { AiOutlineGlobal } from 'react-icons/ai';
 import { CgMenuGridO } from 'react-icons/cg';
+
+// Imported Images
+import logo from '../../imgs/logo.png';
 
 const Navbar = () => {
   // remove the NavBar in the small width screens
@@ -32,7 +35,7 @@ const Navbar = () => {
     <div className='navBar flex'>
       <div className='navBarOne flex'>
         <div>
-          <SiConsul />
+          <AiFillSmile />
         </div>
         <div className='none flex'>
           <li className='flex'>
@@ -45,25 +48,22 @@ const Navbar = () => {
       </div>
       <div className={noBg}>
         <div className='logoDiv'>
-          {/* <img src={logo} className='Logo' /> */}
+          <img src={logo} className='Logo' alt='logo' />
         </div>
 
         <div className={active}>
           <ul className='menu flex'>
             <li onClick={removeNavBar} className='listItem'>
-              1
+              Home
             </li>
             <li onClick={removeNavBar} className='listItem'>
-              2
+              About Me
             </li>
             <li onClick={removeNavBar} className='listItem'>
-              3
+              Skills and Tools
             </li>
             <li onClick={removeNavBar} className='listItem'>
-              4
-            </li>
-            <li onClick={removeNavBar} className='listItem'>
-              5
+              Projects
             </li>
           </ul>
 

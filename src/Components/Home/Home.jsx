@@ -27,7 +27,7 @@ const Home = () => {
 
       <div data-aos='fade-down' data-aos-duration='2500'>
         <div>
-          <img src={Yoo} className='yoo-img'></img>
+          <img src={Yoo} className='yoo-img' alt='profile-img'></img>
           <p>
             <Typical
               loop={Infinity}

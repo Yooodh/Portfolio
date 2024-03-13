@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
+import './Footer.css';
 
 // Imported Images
-// import Logo from '../../assets/logo.png';
+import Logo from '../../imgs/logo.png';
 
 // Imported Icons
 import { TiSocialFacebook } from 'react-icons/ti';
-import { AiFillYoutube, AiOutlineTwitter } from 'react-icons/ai';
-import { FaPinterestP } from 'react-icons/fa';
+import { AiFillYoutube } from 'react-icons/ai';
+import { FaGithub } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
 
 // Import AOS
 import Aos from 'aos';
@@ -23,14 +25,14 @@ const Footer = () => {
       <div className='sectionContainer container grid'>
         <div data-aos='fade-up' data-aos-duration='2500' className='gridOne'>
           <div className='logoDiv'>
-            {/* <img src={Logo} className='Logo' /> */}
+            <img src={Logo} className='Logo' alt='logo' />
           </div>
-          <p>Title</p>
+          <p>SNS</p>
           <div className='socialIcon flex'>
+            <FaGithub className='icon' />
+            <FaInstagram className='icon' />
             <TiSocialFacebook className='icon' />
-            <AiOutlineTwitter className='icon' />
             <AiFillYoutube className='icon' />
-            <FaPinterestP className='icon' />
           </div>
         </div>
 
@@ -41,47 +43,22 @@ const Footer = () => {
         >
           <span className='linkTitle'>title</span>
           <li>
-            <a href=''>1</a>
+            <a href='/'>1</a>
           </li>
           <li>
-            <a href=''>2</a>
+            <a href='/'>2</a>
           </li>
           <li>
-            <a href=''>3</a>
+            <a href='/'>3</a>
           </li>
           <li>
-            <a href=''>4</a>
+            <a href='/'>4</a>
           </li>
           <li>
-            <a href=''>5</a>
+            <a href='/'>5</a>
           </li>
           <li>
-            <a href=''>6</a>
-          </li>
-        </div>
-        <div
-          data-aos='fade-up'
-          data-aos-duration='2500'
-          className='footerLinks'
-        >
-          <span className='linkTitle'>title</span>
-          <li>
-            <a href=''>1</a>
-          </li>
-          <li>
-            <a href=''>2</a>
-          </li>
-          <li>
-            <a href=''>3</a>
-          </li>
-          <li>
-            <a href=''>4</a>
-          </li>
-          <li>
-            <a href=''>5</a>
-          </li>
-          <li>
-            <a href=''>6</a>
+            <a href='/'>6</a>
           </li>
         </div>
         <div
@@ -91,22 +68,47 @@ const Footer = () => {
         >
           <span className='linkTitle'>title</span>
           <li>
-            <a href=''>1</a>
+            <a href='/'>1</a>
           </li>
           <li>
-            <a href=''>2</a>
+            <a href='/'>2</a>
           </li>
           <li>
-            <a href=''>3</a>
+            <a href='/'>3</a>
           </li>
           <li>
-            <a href=''>4</a>
+            <a href='/'>4</a>
           </li>
           <li>
-            <a href=''>5</a>
+            <a href='/'>5</a>
           </li>
           <li>
-            <a href=''>6</a>
+            <a href='/'>6</a>
+          </li>
+        </div>
+        <div
+          data-aos='fade-up'
+          data-aos-duration='2500'
+          className='footerLinks'
+        >
+          <span className='linkTitle'>title</span>
+          <li>
+            <a href='/'>1</a>
+          </li>
+          <li>
+            <a href='/'>2</a>
+          </li>
+          <li>
+            <a href='/'>3</a>
+          </li>
+          <li>
+            <a href='/'>4</a>
+          </li>
+          <li>
+            <a href='/'>5</a>
+          </li>
+          <li>
+            <a href='/'>6</a>
           </li>
         </div>
       </div>

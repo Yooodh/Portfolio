@@ -12,6 +12,7 @@
   --SecondaryColor : hsl(180, 17%, 95%);
   --colorOne : hsl(15, 74%, 70%);
   --colorTwo : hsl(28, 100%, 82%);
+  --colorThree:hsl(56, 73%, 67%);
   --HoverColor : hsl(225, 56%, 59%);
   --whiteColor : hsl(0, 0%, 100%);
   --blackColor : hsl(0, 0%, 12%);
@@ -209,7 +210,7 @@ h2 {
       }
 
       .cardsDiv {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(4,1fr);
 
         .singleCard {
           max-width: 260px;
@@ -219,10 +220,10 @@ h2 {
     }
   }
 
-  .socials {
+  .projects {
     .sectionContainer {
-      .socialsContainer {
-        grid-template-columns: repeat(3,1fr);
+      .projectsContainer {
+        grid-template-columns: repeat(4,1fr);
       }
     }
   }
@@ -239,9 +240,9 @@ h2 {
     }
   }
 
-  .socials {
+  .projects {
     .sectionContainer {
-      .socialsContainer {
+      .projectsContainer {
         grid-template-columns: repeat(4,1fr);
         margin: 3rem 0;
       }
