@@ -3,12 +3,11 @@ import './Navbar.css';
 
 // Imported Icons
 import { AiFillSmile } from 'react-icons/ai';
-import { BsPhoneVibrate } from 'react-icons/bs';
-import { AiOutlineGlobal } from 'react-icons/ai';
 import { CgMenuGridO } from 'react-icons/cg';
+import { FaMoon } from 'react-icons/fa';
 
 // Imported Images
-import logo from '../../imgs/logo.png';
+import logo from '../../Imgs/logo.png';
 
 const Navbar = () => {
   // remove the NavBar in the small width screens
@@ -39,10 +38,8 @@ const Navbar = () => {
         </div>
         <div className='none flex'>
           <li className='flex'>
-            <BsPhoneVibrate className='icon' /> Support
-          </li>
-          <li className='flex'>
-            <AiOutlineGlobal className='icon' /> Languages
+            <FaMoon className='icon' />
+            Dark Mode
           </li>
         </div>
       </div>
@@ -66,12 +63,7 @@ const Navbar = () => {
               Projects
             </li>
           </ul>
-
-          <button onClick={removeNavBar} className='btn flex btnOne'>
-            Contact
-          </button>
         </div>
-        <button className='btn flex btnTwo'>Contact</button>
         <div onClick={showNavBar} className='toggleIcon'>
           <CgMenuGridO className='icon' />
         </div>

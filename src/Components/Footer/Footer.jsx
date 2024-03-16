@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './Footer.css';
 
 // Imported Images
-import Logo from '../../imgs/logo.png';
+import Logo from '../../Imgs/logo.png';
 
 // Imported Icons
 import { TiSocialFacebook } from 'react-icons/ti';
@@ -43,47 +43,22 @@ const Footer = () => {
         >
           <span className='linkTitle'>title</span>
           <li>
-            <a href='/'>1</a>
+            <a href='/'>content</a>
           </li>
           <li>
-            <a href='/'>2</a>
+            <a href='/'>content</a>
           </li>
           <li>
-            <a href='/'>3</a>
+            <a href='/'>content</a>
           </li>
           <li>
-            <a href='/'>4</a>
+            <a href='/'>content</a>
           </li>
           <li>
-            <a href='/'>5</a>
+            <a href='/'>content</a>
           </li>
           <li>
-            <a href='/'>6</a>
-          </li>
-        </div>
-        <div
-          data-aos='fade-up'
-          data-aos-duration='2500'
-          className='footerLinks'
-        >
-          <span className='linkTitle'>title</span>
-          <li>
-            <a href='/'>1</a>
-          </li>
-          <li>
-            <a href='/'>2</a>
-          </li>
-          <li>
-            <a href='/'>3</a>
-          </li>
-          <li>
-            <a href='/'>4</a>
-          </li>
-          <li>
-            <a href='/'>5</a>
-          </li>
-          <li>
-            <a href='/'>6</a>
+            <a href='/'>content</a>
           </li>
         </div>
         <div
@@ -93,29 +68,54 @@ const Footer = () => {
         >
           <span className='linkTitle'>title</span>
           <li>
-            <a href='/'>1</a>
+            <a href='/'>content</a>
           </li>
           <li>
-            <a href='/'>2</a>
+            <a href='/'>content</a>
           </li>
           <li>
-            <a href='/'>3</a>
+            <a href='/'>content</a>
           </li>
           <li>
-            <a href='/'>4</a>
+            <a href='/'>content</a>
           </li>
           <li>
-            <a href='/'>5</a>
+            <a href='/'>content</a>
           </li>
           <li>
-            <a href='/'>6</a>
+            <a href='/'>content</a>
+          </li>
+        </div>
+        <div
+          data-aos='fade-up'
+          data-aos-duration='2500'
+          className='footerLinks'
+        >
+          <span className='linkTitle'>title</span>
+          <li>
+            <a href='/'>content</a>
+          </li>
+          <li>
+            <a href='/'>content</a>
+          </li>
+          <li>
+            <a href='/'>content</a>
+          </li>
+          <li>
+            <a href='/'>content</a>
+          </li>
+          <li>
+            <a href='/'>content</a>
+          </li>
+          <li>
+            <a href='/'>content</a>
           </li>
         </div>
       </div>
 
       <div className='copyRightDiv flex'>
         <p>
-          Courtesy Design | Developed by
+          010-1234-5678 | eogus2604@hanmail.net | Developed by
           <a href='@' target='_blank'>
             Yoo
           </a>

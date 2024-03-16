@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './Support.css';
 
 // Imported Images
-import Img from '../../imgs/yoo.jpg';
+import Img from '../../Imgs/yoo.jpg';
 
 // Import AOS
 import Aos from 'aos';

@@ -2,16 +2,16 @@ import React, { useEffect } from 'react';
 import './Project.css';
 
 // Import Images
-import bg1 from '../../imgs/yoo.jpg';
-import bg2 from '../../imgs/yoo.jpg';
-import bg3 from '../../imgs/yoo.jpg';
-import bg4 from '../../imgs/yoo.jpg';
+import bg1 from '../../Imgs/yoo.jpg';
+import bg2 from '../../Imgs/yoo.jpg';
+import bg3 from '../../Imgs/yoo.jpg';
+import bg4 from '../../Imgs/yoo.jpg';
 
 // Import project Images
-import icon1 from '../../imgs/yoo.jpg';
-import icon2 from '../../imgs/yoo.jpg';
-import icon3 from '../../imgs/yoo.jpg';
-import icon4 from '../../imgs/yoo.jpg';
+import icon1 from '../../Imgs/yoo.jpg';
+import icon2 from '../../Imgs/yoo.jpg';
+import icon3 from '../../Imgs/yoo.jpg';
+import icon4 from '../../Imgs/yoo.jpg';
 
 // Import AOS
 import Aos from 'aos';

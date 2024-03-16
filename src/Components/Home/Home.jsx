@@ -5,7 +5,7 @@ import './Home.css';
 import Typical from 'react-typical';
 
 // Imported Images
-import Yoo from '../../imgs/yoo.jpg';
+import Yoo from '../../Imgs/yoo.jpg';
 
 // Import AOS
 import Aos from 'aos';
