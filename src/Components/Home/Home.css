@@ -4,18 +4,45 @@
   gap: 2rem;
   flex-direction: column;
 
+  .overlay {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(
+      105deg,
+      transparent 40%,
+      rgba(251, 241, 211, 0.3) 45%,
+      rgba(229, 217, 249, 0.3) 50%,
+      transparent 54%
+    );
+    filter: brightness(1.1) opacity(0.8);
+    mix-blend-mode: color-dodge;
+    background-size: 150% 150%;
+    background-position: 100%;
+  }
+
   .yoo-img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    margin-bottom: 30px;
+    margin-bottom: 55px;
+    object-fit: cover;
   }
 
   .mainText {
     color: var(--blackColor);
     font-weight: 700;
-    font-size: 15px;
+    font-size: 25px;
     line-height: 2.5rem;
+  }
+
+  .subText {
+    color: var(--greyText);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 2.5rem;
+    margin-bottom: 20px;
   }
 
   .homeImages {
@@ -25,5 +52,12 @@
     align-items: center;
     position: relative;
     border-radius: 5rem;
+  }
+}
+
+/* Dark Mode */
+#dark {
+  .mainText {
+    color: var(--borderColor);
   }
 }

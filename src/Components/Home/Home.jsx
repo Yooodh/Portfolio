@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import './Home.css';
 
-// Import Typical
-import Typical from 'react-typical';
+// Import Typewriter
+import Typewriter from 'typewriter-effect';
 
-// Imported Images
+// Import Images
 import Yoo from '../../Imgs/yoo.jpg';
 
 // Import AOS
@@ -17,8 +17,30 @@ const Home = () => {
     Aos.init({ duration: 2000 });
   }, []);
 
+  // Image Mouse Event
+  window.onload = function () {
+    let imageContainer = document.querySelector('.imageContainer');
+    let overlay = document.querySelector('.overlay');
+    imageContainer.addEventListener('mousemove', function (e) {
+      let x = e.offsetX;
+      let y = e.offsetY;
+      let rotateY = (-1 / 5) * x + 20;
+      let rotateX = (4 / 30) * y - 20;
+
+      overlay.style = `background-position: ${x / 5 + y / 5}%`;
+
+      imageContainer.style = `transform : perspective(350px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+
+      imageContainer.addEventListener('mouseout', function () {
+        overlay.style = 'filter : opacity(0)';
+        imageContainer.style =
+          'transform : perspective(350px) rotateY(0deg) retateX(0deg)';
+      });
+    });
+  };
+
   return (
-    <div className='home flex container'>
+    <div className='home flex container ' id='DetailHome'>
       <div className='mainText'>
         <h1 data-aos='fade-up' data-aos-duration='2500'>
           Hi, I'm Yoo!
@@ -27,21 +49,20 @@ const Home = () => {
 
       <div data-aos='fade-down' data-aos-duration='2500'>
         <div>
-          <img src={Yoo} className='yoo-img' alt='profile-img'></img>
-          <p>
-            <Typical
-              loop={Infinity}
-              wrapper='b'
-              steps={[
-                '안녕하세요.',
-                1500,
-                '프론트엔드 개발자',
-                1500,
-                '유대현 입니다.',
-                1500,
-              ]}
+          <div className='imageContainer'>
+            <div className='overlay'></div>
+            <img src={Yoo} className='yoo-img ' alt='profile-img'></img>
+          </div>
+          <div className='subText' data-aos='fade-up'>
+            <Typewriter
+              options={{
+                autoStart: true,
+                loop: true,
+                delay: 40,
+                strings: ['안녕하세요.', '프론트엔드 개발자', '유대현 입니다.'],
+              }}
             />
-          </p>
+          </div>
         </div>
       </div>
     </div>

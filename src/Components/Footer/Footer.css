@@ -2,7 +2,7 @@
   background: var(--SecondaryColor);
 
   .sectionContainer {
-    gap: 2.5rem;
+    gap: 3rem;
 
     .gridOne {
       gap: 1rem;
@@ -41,14 +41,16 @@
 
     .footerLinks {
       display: grid;
+      text-align: center;
+      padding-top: 2rem;
 
       .linkTitle {
         color: var(--blackColor);
         font-weight: 500;
         display: block;
         padding-bottom: 1rem;
-        margin-top: 1rem;
       }
+
       li a {
         display: block;
         color: var(--greyText);
@@ -60,6 +62,26 @@
           color: var(--PrimaryColor);
         }
       }
+
+      .iconDiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--SecondaryColor);
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 1px solid var(--borderColor);
+        margin-right: 1rem;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        cursor: default;
+
+        .infoIcon {
+          color: var(--greyText);
+          font-size: 15px;
+        }
+      }
     }
   }
   .copyRightDiv {
@@ -69,5 +91,60 @@
     gap: 1rem;
     border-top: 1px solid var(--greyText);
     text-align: center;
+  }
+}
+
+/* DarkMode */
+#dark {
+  .footer {
+    background: var(--borderColor);
+
+    .sectionContainer {
+      .gridOne {
+        p {
+          color: var(--blackColor);
+        }
+
+        .socialIcon {
+          .icon {
+            border: 1px solid var(--greyText);
+            color: var(--blackColor);
+
+            &:hover {
+              background: var(--greyText);
+              border: 1px solid var(--greyText);
+              color: var(--blackColor);
+            }
+          }
+        }
+      }
+
+      .footerLinks {
+        .linkTitle {
+          color: var(--blackColor);
+        }
+        li a {
+          color: var(--greyText);
+          transition: var(--transition);
+          &:hover {
+            color: var(--blackColor);
+          }
+        }
+        .iconDiv {
+          background: var(--borderColor);
+          border: 1px solid var(--greyText);
+
+          .infoIcon {
+            color: var(--blackColor);
+          }
+        }
+      }
+    }
+    .copyRightDiv {
+      border-top: 1px solid var(--blackColor);
+      p {
+        color: var(--blackColor);
+      }
+    }
   }
 }

@@ -1,65 +1,81 @@
 import React, { useEffect } from 'react';
-import './Project.css';
+import './Projects.css';
 
 // Import Images
-import bg1 from '../../Imgs/yoo.jpg';
-import bg2 from '../../Imgs/yoo.jpg';
-import bg3 from '../../Imgs/yoo.jpg';
-import bg4 from '../../Imgs/yoo.jpg';
+import bg1 from '../../Imgs/MIP_logo.png';
+import bg2 from '../../Imgs/BCL_logo.png';
+import bg3 from '../../Imgs/DGN_background.png';
+import bg4 from '../../Imgs/LUNA_background.png';
 
 // Import project Images
-import icon1 from '../../Imgs/yoo.jpg';
-import icon2 from '../../Imgs/yoo.jpg';
-import icon3 from '../../Imgs/yoo.jpg';
-import icon4 from '../../Imgs/yoo.jpg';
+import icon1 from '../../Imgs/MIP_logo.png';
+import icon2 from '../../Imgs/BCL_logo.png';
+import icon3 from '../../Imgs/DGN_logo.png';
+import icon4 from '../../Imgs/LUNA_logo.png';
 
 // Import AOS
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+
+// Import Router Link
+import { Link } from 'react-router-dom';
 
 const projects = [
   {
     id: 1,
     backgroundImage: bg1,
     projectImage: icon1,
-    projectName: 'MIP_LAB',
-    projectLink: '@1',
+    projectName: 'MIPLAB',
+    projectLink: '/MIPLAB',
   },
   {
     id: 2,
     backgroundImage: bg2,
     projectImage: icon2,
-    projectName: 'BeClever_ROI',
-    projectLink: '@2',
+    projectName: 'BeCleverROI',
+    projectLink: '/BeCleverROI',
   },
   {
     id: 3,
     backgroundImage: bg3,
     projectImage: icon3,
     projectName: 'DigitalGameNomad',
-    projectLink: '@3',
+    projectLink: '/DigitalGameNomad',
   },
   {
     id: 4,
     backgroundImage: bg4,
     projectImage: icon4,
     projectName: 'Luna',
-    projectLink: '@4',
+    projectLink: '/Luna',
   },
 ];
 
-const Project = () => {
+const Projects = () => {
   // UseEffect to set animation duration
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
 
+  // Add url
+  const url = 'https://github.com/Yooodh';
+
   return (
-    <div className='projects container section'>
+    <div className='projects container section' id='DetailProject'>
       <div className='sectionContainer'>
         <h2 data-aos='fade-down' data-aos-duration='2500'>
           Projects
         </h2>
+        <button
+          data-aos='fade-left'
+          data-aos-duration='2500'
+          className='btn'
+          onClick={() => {
+            window.open(url);
+          }}
+        >
+          View All
+        </button>
 
         <div className='projectsContainer grid'>
           {projects.map(
@@ -83,6 +99,7 @@ const Project = () => {
                     className='backgroundImage'
                     alt='img1'
                   />
+
                   <div className='projectDetails'>
                     <div className='projectPicture'>
                       <img
@@ -93,7 +110,9 @@ const Project = () => {
                     </div>
                     <div className='projectName'>
                       <span>{projectName}</span>
-                      <p>{projectLink}</p>
+                      <Link to={projectLink}>
+                        <p>View</p>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -106,4 +125,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default Projects;

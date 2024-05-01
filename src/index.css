@@ -25,10 +25,19 @@
   --boxShadow : box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0,0,0,0.05) 0px 4px 6px -2px;
   --transition: .4s ease-in-out;
 }
- 
+
 body {
   background: var(--whiteColor);
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
+
+img {
+  -webkit-user-drag: none;
+ }
 
 a {
   text-decoration: none;
@@ -125,7 +134,8 @@ h2 {
 
   .footer {
     .sectionContainer {
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(3,1fr);
+    
     }
   }
 }
@@ -184,7 +194,7 @@ h2 {
     }
   }
 
-  .support {
+  .about {
     .sectionContainer {
       .infoDiv {
         grid-template-columns: repeat(2,1fr);
@@ -200,8 +210,8 @@ h2 {
   }
 
   
-  .info {
-    .infoContainer {
+  .skills {
+    .skillsContainer {
       padding: 0 6rem;
       .titleDiv {
         width: 90%;
@@ -307,7 +317,7 @@ h2 {
     }
   }
 
-  .support {
+  .about {
     .sectionContainer {
       .infoDiv {
         gap: 1rem;
@@ -337,4 +347,15 @@ h2 {
 ::-webkit-scrollbar-thumb {
   background: var(--PrimaryColor);
   border-radius: 10px;
+}
+
+/* DarkMode */
+#dark {
+  background: var(--blackColor);
+  transition: var(--transition);
+  
+}
+
+#light {
+  transition: var(--transition);
 }

@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 
-// Imported Icons
-import { AiFillSmile } from 'react-icons/ai';
+// Import Icons
+import { MdFullscreen } from 'react-icons/md';
+import { MdFullscreenExit } from 'react-icons/md';
 import { CgMenuGridO } from 'react-icons/cg';
 import { FaMoon } from 'react-icons/fa';
+import { CiLight } from 'react-icons/ci';
 
-// Imported Images
+// Import Images
 import logo from '../../Imgs/logo.png';
 
-const Navbar = () => {
+// Import ReactScroll
+import { Link } from 'react-scroll';
+
+const Navbar = ({ toggleTheme, theme }) => {
   // remove the NavBar in the small width screens
   const [active, setActive] = useState('navBarMenu');
   const showNavBar = () => {
@@ -34,34 +39,59 @@ const Navbar = () => {
     <div className='navBar flex'>
       <div className='navBarOne flex'>
         <div>
-          <AiFillSmile />
+          <MdFullscreen />
+          <MdFullscreenExit />
         </div>
-        <div className='none flex'>
-          <li className='flex'>
-            <FaMoon className='icon' />
-            Dark Mode
+
+        <div
+          className='flex modeFont'
+          onClick={toggleTheme}
+          checked={theme === 'dark'}
+        >
+          <li className='flex textDark'>
+            {theme === 'light' ? (
+              <FaMoon className='icon' />
+            ) : (
+              <CiLight className='icon' />
+            )}
+            {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
           </li>
         </div>
       </div>
       <div className={noBg}>
         <div className='logoDiv'>
-          <img src={logo} className='Logo' alt='logo' />
+          <Link to='DetailHome' spy={true} smooth={true}>
+            <li>
+              <img src={logo} className='Logo' alt='logo' />
+            </li>
+          </Link>
         </div>
 
         <div className={active}>
-          <ul className='menu flex'>
-            <li onClick={removeNavBar} className='listItem'>
-              Home
-            </li>
-            <li onClick={removeNavBar} className='listItem'>
-              About Me
-            </li>
-            <li onClick={removeNavBar} className='listItem'>
-              Skills and Tools
-            </li>
-            <li onClick={removeNavBar} className='listItem'>
-              Projects
-            </li>
+          <ul className='menu flex '>
+            <Link to='DetailHome' spy={true} smooth={true}>
+              <li onClick={removeNavBar} className='listItem'>
+                Home
+              </li>
+            </Link>
+
+            <Link to='DetailSupport' spy={true} smooth={true} offset={-40}>
+              <li onClick={removeNavBar} className='listItem'>
+                About Me
+              </li>
+            </Link>
+
+            <Link to='DetailInfo' spy={true} smooth={true} offset={-108}>
+              <li onClick={removeNavBar} className='listItem'>
+                Skills and Tools
+              </li>
+            </Link>
+
+            <Link to='DetailProject' spy={true} smooth={true} offset={-100}>
+              <li onClick={removeNavBar} className='listItem'>
+                Projects
+              </li>
+            </Link>
           </ul>
         </div>
         <div onClick={showNavBar} className='toggleIcon'>

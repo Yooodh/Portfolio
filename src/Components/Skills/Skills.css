@@ -1,0 +1,130 @@
+.skills {
+  background: var(--SecondaryColor);
+
+  .skillsContainer {
+    .titleDiv {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+      justify-content: space-between;
+    }
+
+    .cardsDiv {
+      gap: 1.5rem;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+
+      .singleCard {
+        background: var(--whiteColor);
+        padding: 3rem 2rem;
+        border-radius: 10rem;
+        gap: 1rem;
+        text-align: center;
+        margin: auto;
+        height: 320px;
+        width: 90%;
+        max-width: 250px;
+        margin-bottom: 4rem;
+
+        .divHover:hover {
+          animation: animation-play-state;
+        }
+
+        .iconDiv {
+          justify-content: center;
+          margin: auto;
+          background: var(--PrimaryColor);
+          width: max-content;
+          height: 55px;
+          padding: 1rem;
+          border: 3rem;
+          border-radius: 5px;
+          cursor: pointer;
+          animation: animated 2s infinite;
+
+          .icon {
+            color: var(--whiteColor);
+          }
+        }
+
+        .cardTitle {
+          color: var(--blackColor);
+          font-weight: 700;
+        }
+        .colorOne {
+          background: var(--colorOne);
+        }
+        .colorTwo {
+          background: var(--colorTwo);
+        }
+        .colorThree {
+          background: var(--colorThree);
+        }
+      }
+    }
+  }
+}
+
+@keyframes animated {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* DarkMode */
+#dark {
+  .skills {
+    background: var(--blackColor);
+    transition: var(--transition);
+
+    p {
+      color: var(--blackColor);
+    }
+
+    .skillsContainer {
+      .titleDiv {
+        h2 {
+          color: var(--borderColor);
+        }
+      }
+
+      .cardsDiv {
+        .singleCard {
+          background: var(--borderColor);
+
+          .iconDiv {
+            justify-content: center;
+            margin: auto;
+            background: var(--PrimaryColor);
+
+            .icon {
+              color: var(--blackColor);
+            }
+          }
+
+          .colorOne {
+            background: var(--colorOne);
+          }
+          .colorTwo {
+            background: var(--colorTwo);
+          }
+          .colorThree {
+            background: var(--colorThree);
+          }
+        }
+      }
+    }
+  }
+}
+
+#light {
+  .skills {
+    transition: var(--transition);
+  }
+}

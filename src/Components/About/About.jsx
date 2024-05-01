@@ -1,21 +1,21 @@
 import React, { useEffect } from 'react';
-import './Support.css';
+import './About.css';
 
-// Imported Images
+// Import Images
 import Img from '../../Imgs/yoo.jpg';
 
 // Import AOS
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
-const Support = () => {
+const About = () => {
   // UseEffect to set animation duration
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
 
   return (
-    <div className='support container section'>
+    <div className='about container section' id='DetailSupport'>
       <div className='sectionContainer'>
         <div className='titlesDiv'>
           <small>About Me</small>
@@ -63,4 +63,4 @@ const Support = () => {
   );
 };
 
-export default Support;
+export default About;
