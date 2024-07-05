@@ -124,7 +124,6 @@ h2 {
 }
 
 
-
 @media screen and (min-width: 680px) {
   .home {
     .mainText {
@@ -334,10 +333,10 @@ h2 {
   }
 }
 
-::selection {
+/* ::selection {
   background: var(--PrimaryColor);
   color: var(--whiteColor);
-}
+} */
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -349,13 +348,45 @@ h2 {
   border-radius: 10px;
 }
 
-/* DarkMode */
+/* .slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: bottom;
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: top;
+} */
+
+/* Dark Mode */
 #dark {
   background: var(--blackColor);
   transition: var(--transition);
+
   
+/* ::-webkit-scrollbar {
+  width: 10px;
+  background: var(--borderColor);
 }
 
+::-webkit-scrollbar-thumb {
+  background: var(--blackColor);
+  border-radius: 10px;
+} */
+
+}
+
+/* Light Mode */
 #light {
   transition: var(--transition);
 }

@@ -1,0 +1,52 @@
+.projectPage {
+  background: var(--PrimaryColor);
+
+  .backIcon {
+    position: fixed;
+    right: 3rem;
+    top: 2rem;
+    padding-right: 2rem;
+    /* opacity: 0.6; */
+    /* outline: none; */
+
+    .icon {
+      color: var(--whiteColor);
+    }
+    .icon:hover {
+      transform: scale(1.2);
+      transition: var(--transition);
+    }
+  }
+
+  .projectDiv {
+    background: var(--whiteColor);
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+    .projectTitle {
+      justify-content: space-between;
+    }
+    .imgContainer {
+      margin: auto;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        max-width: 420px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+#dark {
+  .projectPage {
+    background: var(--blackColor);
+    .projectDiv {
+      background: var(--borderColor);
+    }
+  }
+}

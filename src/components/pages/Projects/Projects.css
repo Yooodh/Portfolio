@@ -1,0 +1,151 @@
+.projects {
+  .sectionContainer {
+    text-align: center;
+
+    .btn {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .projectsContainer {
+      margin-top: 1rem;
+      gap: 1.5rem;
+
+      .singleproject {
+        position: relative;
+        height: 320px;
+        width: 85%;
+        max-width: 250px;
+        overflow: hidden;
+        border-radius: 10rem;
+        gap: 1rem;
+        margin: auto;
+
+        .backgroundImage,
+        .projectImage,
+        .projectName {
+          position: absolute;
+        }
+
+        .backgroundImage {
+          height: 100%;
+          width: 100%;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          object-fit: cover;
+          /* object-fit: fill; */
+          background-color: var(--blackColor);
+        }
+
+        .projectImage {
+          height: 50px;
+          width: 50px;
+          /* object-fit: cover; */
+          object-fit: fill;
+          border-radius: 50%;
+          bottom: 30px;
+          left: 40%;
+          transform: translateX(-50%);
+          border: 5px solid rgba(225, 225, 225, 0.637);
+          transition: var(--transition);
+          animation: animated 2.3s infinite;
+          background-color: var(--blackColor);
+        }
+
+        .projectName {
+          bottom: -100%;
+          width: 100%;
+          height: max-content;
+          background: var(--whiteColor);
+          padding: 1rem 1rem;
+          transition: var(--transition);
+          animation: animatedBorders 2.3s infinite;
+
+          span {
+            color: black;
+            font-weight: 700;
+          }
+
+          p {
+            margin-top: 0.5rem;
+            color: var(--PrimaryColor);
+            font-style: italic;
+          }
+          p:hover {
+            transform: scale(1.2);
+            transition: var(--transition);
+          }
+        }
+
+        &:hover {
+          .projectName {
+            bottom: 0;
+            transition: 1s ease-in-out;
+          }
+
+          .projectImage {
+            bottom: 110px;
+            transition: 1s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes animated {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes animatedBorders {
+  0% {
+    border-radius: 0rem;
+  }
+  50% {
+    border-radius: 2rem;
+  }
+  100% {
+    border-radius: 0rem;
+  }
+}
+
+/* Dark Mode */
+#dark {
+  .projects {
+    h2 {
+      color: var(--borderColor);
+    }
+    .sectionContainer {
+      .btn {
+        color: var(--borderColor);
+      }
+      .projectsContainer {
+        .singleproject {
+          .projectName {
+            background: var(--blackColor);
+
+            transition: var(--transition);
+
+            span {
+              color: var(--borderColor);
+            }
+
+            p {
+              color: var(--greyText);
+            }
+          }
+        }
+      }
+    }
+  }
+}
