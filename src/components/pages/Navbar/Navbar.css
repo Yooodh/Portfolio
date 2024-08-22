@@ -4,6 +4,17 @@
   width: 100%;
   z-index: 1000;
 
+  .listItem {
+    white-space: nowrap;
+  }
+
+  .menu .active {
+    background: var(--PrimaryColor);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
   .navBarOne,
   .navBarTwo {
     justify-content: space-between;

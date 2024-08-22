@@ -61,7 +61,7 @@ const Projects = () => {
   const url = 'https://github.com/Yooodh';
 
   return (
-    <div className='projects container section' id='DetailProject'>
+    <div className='projects container section' id='detailProjects'>
       <div className='sectionContainer'>
         <h2 data-aos='fade-down' data-aos-duration='2500'>
           Projects

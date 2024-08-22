@@ -45,6 +45,26 @@ const Navbar = ({ toggleTheme, theme }) => {
     };
   }, []);
 
+  // const navTabs = [
+  //   {
+  //     name: 'Home',
+  //     id: 'home',
+  //   },
+  //   {
+  //     name: 'About Me',
+  //     id: 'about',
+  //   },
+  //   {
+  //     name: 'Skills and Tools',
+  //     id: 'skills',
+  //   },
+
+  //   {
+  //     name: 'Projects',
+  //     id: 'projects',
+  //   },
+  // ];
+
   return (
     <div className='navBar flex'>
       <div className='navBarOne flex'>
@@ -69,7 +89,7 @@ const Navbar = ({ toggleTheme, theme }) => {
       </div>
       <div className={noBg}>
         <div className='logoDiv'>
-          <Link to='DetailHome' spy={true} smooth={true}>
+          <Link to='detailHome' spy={true} smooth={true}>
             <li>
               <img
                 src={logo}
@@ -83,17 +103,23 @@ const Navbar = ({ toggleTheme, theme }) => {
 
         <div className={active}>
           <ul className='menu flex'>
-            <Link to='DetailHome' spy={true} smooth={true} activeClass='active'>
+            <Link
+              to='detailHome'
+              spy={true}
+              smooth={true}
+              offset={-100}
+              activeClass='active'
+            >
               <li onClick={removeNavBar} className='listItem'>
                 Home
               </li>
             </Link>
 
             <Link
-              to='DetailSupport'
+              to='detailAbout'
               spy={true}
               smooth={true}
-              offset={-40}
+              offset={-60}
               activeClass='active'
             >
               <li onClick={removeNavBar} className='listItem'>
@@ -102,10 +128,10 @@ const Navbar = ({ toggleTheme, theme }) => {
             </Link>
 
             <Link
-              to='DetailInfo'
+              to='detailSkills'
               spy={true}
               smooth={true}
-              offset={-108}
+              offset={-50}
               activeClass='active'
             >
               <li onClick={removeNavBar} className='listItem'>
@@ -114,16 +140,30 @@ const Navbar = ({ toggleTheme, theme }) => {
             </Link>
 
             <Link
-              to='DetailProject'
+              to='detailProjects'
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-10}
               activeClass='active'
             >
               <li onClick={removeNavBar} className='listItem'>
                 Projects
               </li>
             </Link>
+            {/* {navTabs.map((tab, index) => (
+              <Link
+                className='listItem'
+                activeClass='active'
+                to={tab.id}
+                spy={true}
+                smooth={true}
+                offset={-60}
+                onClick={removeNavBar}
+                key={index}
+              >
+                <li>{tab.name}</li>
+              </Link>
+            ))} */}
           </ul>
         </div>
         <div onClick={toggleNavBar} className='toggleIcon'>

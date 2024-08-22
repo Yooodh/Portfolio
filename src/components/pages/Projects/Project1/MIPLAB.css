@@ -1,5 +1,5 @@
-.project2 {
-  background: #2491b4;
+.project1 {
+  background: #6265ef;
   height: 100vh;
   overflow-y: scroll;
   padding-right: 15px;
@@ -45,12 +45,12 @@
   }
 }
 
-.project2::-webkit-scrollbar {
+.project1::-webkit-scrollbar {
   width: 10px;
-  background: #2491b4;
+  background: #6265ef;
 }
 
-.project2::-webkit-scrollbar-thumb {
+.project1::-webkit-scrollbar-thumb {
   background: var(--whiteColor);
   border-radius: 10px;
 }

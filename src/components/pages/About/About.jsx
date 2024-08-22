@@ -15,7 +15,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className='about container section' id='DetailSupport'>
+    <div className='about container section' id='detailAbout'>
       <div className='sectionContainer'>
         <div className='titlesDiv'>
           <small>About Me</small>

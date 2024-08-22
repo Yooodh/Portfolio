@@ -1,12 +1,15 @@
 .skills {
   background: var(--SecondaryColor);
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 
   .skillsContainer {
+    margin-top: 40px;
     .titleDiv {
       flex-direction: column;
       text-align: center;
-      gap: 1.5rem;
-      justify-content: space-between;
+      /* gap: 1.5rem; */
+      /* justify-content: space-between; */
     }
 
     .cardsDiv {
@@ -16,7 +19,7 @@
 
       .singleCard {
         background: var(--whiteColor);
-        padding: 3rem 2rem;
+        /* padding: 3rem 2rem; */
         border-radius: 10rem;
         gap: 1rem;
         text-align: center;
@@ -24,7 +27,7 @@
         height: 320px;
         width: 90%;
         max-width: 250px;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
 
         .divHover:hover {
           animation: animation-play-state;

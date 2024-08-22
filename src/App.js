@@ -56,6 +56,12 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  // theme 상태에 따라 body 요소의 id를 설정 'light' 또는 'dark'
+  useEffect(() => {
+    document.body.id = theme;
+    // theme 상태가 변경될 때마다 useEffect실행
+  }, [theme]);
+
   return (
     <>
       {isLoading ? (

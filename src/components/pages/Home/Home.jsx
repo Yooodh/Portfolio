@@ -53,7 +53,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='home flex container ' id='DetailHome'>
+    <div className='home flex container' id='detailHome'>
       <div className='mainText'>
         <h1 data-aos='fade-up' data-aos-duration='2500'>
           Hi, I'm Yoo!

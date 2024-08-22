@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { TiArrowBackOutline } from 'react-icons/ti';
+import { IoCloseCircleOutline } from 'react-icons/io5';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import Yoo from '../../../../assets/images/yoo.jpg';
-import { motion } from 'framer-motion';
+import './Luna.css';
+
+import DGNMain from '../../../../assets/images/DigitalGameNomad_Main.jpeg';
 
 function Luna() {
   useEffect(() => {
@@ -19,7 +20,7 @@ function Luna() {
   };
 
   return (
-    <div className='projectPage section'>
+    <div className='project4 section'>
       <div>
         <div
           data-aos='fade-left'
@@ -27,29 +28,36 @@ function Luna() {
           className='flex backIcon'
           onClick={handleGoBack}
         >
-          <TiArrowBackOutline size={30} className='icon' />
+          <IoCloseCircleOutline size={30} className='icon' />
+          <h3>&nbsp;CLOSE</h3>
         </div>
       </div>
+
       <div className='container projectDiv'>
         <div className='titleDiv flex projectTitle'>
-          <h2 data-aos='fade-right' data-aos-duration='2500'>
+          <h1 data-aos='fade-right' data-aos-duration='2500'>
             Luna
-          </h2>
+          </h1>
         </div>
         <div />
-        <div>
+
+        {/* page start */}
+        <div className='section'>
+          <h3>Main page</h3>
           <div className='imgContainer flex'>
-            <img src={Yoo} alt='Project1' className='' />
+            <img src={DGNMain} alt='Project1' className='' />
           </div>
-          <div>
-            <h3>title</h3>
-            <p>content</p>
-            <div className='imgContainer flex'>
-              <img src={Yoo} alt='Project1' className='' />
-            </div>
-            <h3>title</h3>
-            <p>content</p>
-          </div>
+        </div>
+        {/* page end */}
+
+        <div className='section'>
+          <h3>Purpose</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae et
+            dolorem soluta? Corrupti, ut harum! Neque sequi, beatae, odit autem,
+            incidunt quos ab quo mollitia ipsa voluptatum dicta optio!
+            Necessitatibus.
+          </p>
         </div>
       </div>
     </div>

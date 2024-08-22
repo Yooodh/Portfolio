@@ -21,7 +21,7 @@ const Info = () => {
   const javascripturl = 'https://github.com/Yooodh/JavaScriptStudy';
   const reacturl = 'https://github.com/Yooodh/ReactStudy';
   return (
-    <div className='skills section' id='DetailInfo'>
+    <div className='skills section' id='detailSkills'>
       <div className='skillsContainer container'>
         <div className='titleDiv flex'>
           <h2 data-aos='fade-right' data-aos-duration='2500'>

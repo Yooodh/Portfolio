@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { TiArrowBackOutline } from 'react-icons/ti';
+import { IoCloseCircleOutline } from 'react-icons/io5';
 import './BeCleverROI.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import Yoo from '../../../../assets/images/yoo.jpg';
 import { motion } from 'framer-motion';
-import Navbar from '../../Navbar/Navbar';
+
+import DGNMain from '../../../../assets/images/DigitalGameNomad_Main.jpeg';
 
 function BeCleverROI() {
   useEffect(() => {
@@ -21,50 +21,45 @@ function BeCleverROI() {
   };
 
   return (
-    <motion.div
-      initial={{ y: 100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ y: -100, opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className='projectPage section'
-    >
-      <div>
-        <div
-          data-aos='fade-left'
-          data-aos-duration='2500'
-          className='flex backIcon'
-        >
-          <TiArrowBackOutline
-            size={30}
-            className='icon flex'
-            onClick={handleGoBack}
-          />
-        </div>
+    <div className='project2 section'>
+      <div
+        data-aos='fade-left'
+        data-aos-duration='2500'
+        className='flex backIcon'
+        onClick={handleGoBack}
+      >
+        <IoCloseCircleOutline size={30} className='icon' />
+        <h3>&nbsp;CLOSE</h3>
       </div>
 
       <div className='container projectDiv'>
         <div className='titleDiv flex projectTitle'>
-          <h2 data-aos='fade-down' data-aos-duration='2500'>
+          <h1 data-aos='fade-right' data-aos-duration='2500'>
             BeClever_ROI
-          </h2>
+          </h1>
         </div>
         <div />
-        <div>
+
+        {/* page start */}
+        <div className='section'>
+          <h3>Main page</h3>
           <div className='imgContainer flex'>
-            <img src={Yoo} alt='Project1' className='' />
-          </div>
-          <div>
-            <h3>title</h3>
-            <p>content</p>
-            <div className='imgContainer flex'>
-              <img src={Yoo} alt='Project1' className='' />
-            </div>
-            <h3>title</h3>
-            <p>content</p>
+            <img src={DGNMain} alt='Project1' className='' />
           </div>
         </div>
+        {/* page end */}
+
+        <div className='section'>
+          <h3>Purpose</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae et
+            dolorem soluta? Corrupti, ut harum! Neque sequi, beatae, odit autem,
+            incidunt quos ab quo mollitia ipsa voluptatum dicta optio!
+            Necessitatibus.
+          </p>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
